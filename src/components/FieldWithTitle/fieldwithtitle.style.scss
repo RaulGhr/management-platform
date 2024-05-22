@@ -1,0 +1,23 @@
+.fieldwithtitile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+
+    h3{
+        color: white;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    input, textarea{
+        border: 2px solid white;
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: transparent;
+    }
+
+    textarea {
+        resize: none;
+    }
+}

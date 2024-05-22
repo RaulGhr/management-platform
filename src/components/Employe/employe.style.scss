@@ -1,0 +1,26 @@
+.employe{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #233656;
+    border-radius: 30px;
+    padding: 20px;
+
+    color: #233656;
+
+    h3, p{
+        margin-bottom: 10px;
+    }
+    button{
+        background-color: #233656;
+        color: white;
+        border: 2px solid #233656;
+        border-radius: 30px;
+        width: 30%;
+        height: 30px;
+        font-weight: 600;
+        align-self: center;
+    }
+
+}

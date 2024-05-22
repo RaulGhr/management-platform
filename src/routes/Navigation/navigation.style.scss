@@ -1,0 +1,36 @@
+.navigation{
+
+    background-color: #F4F5F7;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3vw;
+
+    
+
+    h1{
+        font-family: "Abril Fatface", serif;
+        color: #233656;
+        font-weight: 400;
+        text-align: center;
+        font-size: 30px;
+        text-decoration: none !important;
+    }
+    .right{
+        display: flex;
+        align-items: center;
+
+        h2{
+            font-size: 20px;
+            color: #233656;
+            font-family: 'Atlasi', sans-serif;
+        }
+
+        h2:nth-child(1){
+            margin-right: 20px;
+        }
+    
+    
+    }
+}
