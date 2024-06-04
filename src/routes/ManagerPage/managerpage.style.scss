@@ -45,14 +45,14 @@
         .add-task{
             background-color: white;
             width: 50vw;
-            height: 60vh;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border-radius: 40px;
 
-            form{
+            .form{
                 width: 90%;
                 display: flex;
                 flex-direction: column;
@@ -92,6 +92,11 @@
                     font-size: 20px;
                     font-weight: 600;
                 }
+
+                button:hover{
+                    transform: scale(1.1);
+                }
+               
             }
         }
     }
