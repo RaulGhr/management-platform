@@ -38,4 +38,11 @@ public class TaskController {
         taskRepository.update(task);
         return task;
     }
+
+    @DeleteMapping
+    public Task delete(@RequestBody Task task){
+        System.out.println("Deleting task ...");
+        taskRepository.delete(task.getId());
+        return task;
+    }
 }

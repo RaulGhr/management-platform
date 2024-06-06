@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ManagementPlatformDB" uuid="de073eae-34d2-4716-9796-ea0924d85302">
+    <data-source source="LOCAL" name="ManagementPlatformDB" uuid="3b6605a0-63b7-4ab9-bf60-ba84aa7a4de6">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:F:\Programare\Facultate\MPP\backend-management-platform\ManagementPlatformDB</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/ManagementPlatformDB</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
       </jdbc-additional-properties>

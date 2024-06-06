@@ -4,7 +4,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.driver_class">org.sqlite.JDBC</property>
-        <property name="connection.url">jdbc:sqlite:F:/Programare/Facultate/MPP/backend-management-platform/ManagementPlatformDB</property>
+        <property name="connection.url">jdbc:sqlite:D:/Programare/Facultate/ISS/management-platform backend/ManagementPlatformDB</property>
 <!--        <property name="connection.username"></property>-->
 <!--        <property name="connection.password"></property>-->
 
