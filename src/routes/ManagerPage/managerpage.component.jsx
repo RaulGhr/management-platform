@@ -24,6 +24,17 @@ const ManagerPage = () => {
 
     const createTaskHandler = async () => {
         console.log("Add task");
+
+        if (!selectedUser.id) {
+            alert("Please select an user");
+            return;
+        }
+
+        if (!document.querySelector("input[name='name']").value) {
+            alert("Please enter a name");
+            return;
+        }
+
         var task = {
             name: document.querySelector("input[name='name']").value,
             description: document.querySelector("textarea[name='description']").value,
@@ -36,6 +47,10 @@ const ManagerPage = () => {
             return;
         } 
         alert("Task added successfully");
+
+        document.querySelector("input[name='name']").value = "";
+        document.querySelector("textarea[name='description']").value = "";
+        setSelectedUser({});
     }
 
     const refresh = () => {

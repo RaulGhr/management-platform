@@ -143,4 +143,24 @@ export async function updateTask(task) {
     }
 }
 
+export async function deleteTask(task) {
+    try{
+        const response = await fetch('http://localhost:8080/task', {
+            method: 'Delete',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(task)
+        });
+        if (response.status === 404) {
+            return{"error": "Error updating task"};
+
+        }
+        return null;
+    }
+    catch(err){
+        console.log("ApiCalls",err);
+    }
+}
+
 

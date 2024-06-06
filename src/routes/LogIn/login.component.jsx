@@ -14,6 +14,18 @@ const LogIn = () => {
 
   const logInHandler = async () =>{
     console.log("Log in");
+
+    if(!document.querySelector("input[name='username']").value){
+      alert("Please enter a username");
+      return;
+    }
+
+    if(!document.querySelector("input[name='password']").value){
+      alert("Please enter a password");
+      return;
+    }
+
+
     var user = {
       username: document.querySelector("input[name='username']").value,
       password: document.querySelector("input[name='password']").value,

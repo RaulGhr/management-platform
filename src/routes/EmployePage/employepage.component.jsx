@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/user.context";
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+// import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 import "./employepage.style.scss";
 
@@ -59,6 +59,11 @@ const EmployePage = () => {
     const updateTaskHandler = async (newStatus) => {
         console.log("Update task");
         var task = selectedTask;
+        if (!task.id) {
+            alert("Please select a task");
+            return;
+        }
+
         task.status = newStatus;
         const response = await updateTask(task);
         console.log(response);
@@ -68,6 +73,7 @@ const EmployePage = () => {
         } 
         // alert("Task updated successfully");
         fetchTasks();
+        setSelectedTask({});
     }
 
     console.log("inainte de return",tasks);
@@ -78,26 +84,26 @@ const EmployePage = () => {
                     <h2 className="section-title" onClick={()=>updateTaskHandler("created")}>New Tasks</h2>
                     <div className="tasks-list">
                         <button onClick={()=>refresh()}>Refresh</button>
-                        {tasks.created && tasks.created.map(task => <Task key={task.id} task={task} styleClass="taskDisplay" setTask={setSelectedTask}/>)}
+                        {tasks.created && tasks.created.map(task => <Task key={task.id} task={task} styleClass="taskDisplay" setTask={setSelectedTask} refresh={fetchTasks}/> )}
                     </div>
                     
                 </section>
                 <section>
                     <h2 className="section-title" onClick={()=>updateTaskHandler("workingOn")}>Working On</h2>
                     <div className="tasks-list">
-                        {tasks.workingOn && tasks.workingOn.map(task => <Task key={task.id} task={task} styleClass="taskDisplay" setTask={setSelectedTask}/>)}
+                        {tasks.workingOn && tasks.workingOn.map(task => <Task key={task.id} task={task} styleClass="taskDisplay" setTask={setSelectedTask} refresh={fetchTasks}/>)}
                     </div>
                 </section>
                 <section>
                     <h2 className="section-title" onClick={()=>updateTaskHandler("testing")}>Testing</h2>
                     <div className="tasks-list">
-                        {tasks.testing && tasks.testing.map(task => <Task key={task.id} task={task} styleClass="taskDisplay" setTask={setSelectedTask}/>)}
+                        {tasks.testing && tasks.testing.map(task => <Task key={task.id} task={task} styleClass="taskDisplay" setTask={setSelectedTask} refresh={fetchTasks}/>)}
                     </div>
                 </section>
                 <section>
                     <h2 className="section-title" onClick={()=>updateTaskHandler("finished")}>Finished</h2>
                     <div className="tasks-list">
-                        {tasks.finished && tasks.finished.map(task => <Task key={task.id} task={task} styleClass="taskDisplay" setTask={setSelectedTask}/>)}
+                        {tasks.finished && tasks.finished.map(task => <Task key={task.id} task={task} styleClass="taskDisplay" setTask={setSelectedTask} refresh={fetchTasks}/>)}
                     </div>
                 </section>
                 

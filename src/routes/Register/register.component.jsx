@@ -18,6 +18,22 @@ const Register = () => {
     const password = document.querySelector("input[name='password']").value;
     const repeatPassword = document.querySelector("input[name='repeatPassword']").value;
 
+
+    if(!username){
+      alert("Please enter a username");
+      return;
+    }
+
+    if(!password){
+      alert("Please enter a password");
+      return;
+    }
+
+    if(!repeatPassword){
+      alert("Please repeat the password");
+      return;
+    }
+
     if (password !== repeatPassword) {
       alert("Passwords do not match");
       return;
